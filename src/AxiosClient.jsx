@@ -1,5 +1,5 @@
 import axios from 'axios';
-import {useState} from "react";
+import {useState, useEffect} from "react";
 import AppContext from "./context";
 import App from "./App";
 
@@ -64,6 +64,10 @@ const AxiosClient = () => {
     }).then(({data}) => {
         setUser(data)
     }).catch(handleError)
+
+    useEffect(() => {
+        getUser("Kieren")
+    }, [])
 
     const createUser = (newUser) => apiCall({
         method: "post",
