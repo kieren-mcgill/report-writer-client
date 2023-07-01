@@ -29,12 +29,10 @@ const AxiosClient = () => {
 
     const getStudents = (userId) => apiCall({
         method: "get",
-        url: `/students/`,
-        data: userId
+        url: `/students/${userId}`,
     }).then(({data}) => {
         setStudents(data)
     }).catch(handleError)
-
 
     const getStudent = (studentId) => apiCall({
         method: "get",
@@ -72,7 +70,7 @@ const AxiosClient = () => {
     const createUser = (newUser) => apiCall({
         method: "post",
         url: `/users`,
-        data: newUser
+        data: { newUser }
     }).then(({data}) => {
         setUser(data)
     }).catch(handleError)
@@ -80,7 +78,7 @@ const AxiosClient = () => {
     const editUser = (userId, updateUser, username) => apiCall({
         method: "patch",
         url: `/users/${userId}`,
-        data: updateUser
+        data: { updateUser }
     }).then(() => {
         getUser(username)
     })
@@ -95,7 +93,7 @@ const AxiosClient = () => {
     const generateReport = (student) => apiCall({
         method: "get",
         url: `/generate`,
-        data: student
+        data: { student }
     }).then(({data}) => {
         setReport(data)
     }).catch(handleError)
