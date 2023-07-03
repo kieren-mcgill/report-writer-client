@@ -7,7 +7,6 @@ const Dashboard = () => {
             height:'100%',
             backgroundColor: 'green'
         }}>
-
         </Box>
     )
 }
