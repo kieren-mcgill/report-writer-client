@@ -1,15 +1,16 @@
 import {Route, Routes} from "react-router-dom";
-import {Box} from "@mui/material";
 import LandingPage from "./LandingPage";
-import ViewStudents from "./ViewStudents";
+import StudentList from "./StudentList";
 import SingleStudent from "./SingleStudent";
+import AddStudent from "./AddStudent";
 
 const AppRouter = () => {
     return (
             <Routes>
                 <Route path='/' element={(<LandingPage/>)}/>
-                <Route path='/view-students' element={(<ViewStudents/>)}/>
-                <Route path='/single-student' element={(<SingleStudent/>)}/>
+                <Route path='/student-list' element={(<StudentList/>)}/>
+                {/*<Route path={`/single-student/${studentId}`} element={(<SingleStudent studentId={studentId}/>)}/>*/}
+                <Route path='/add-student' element={(<AddStudent/>)}/>
             </Routes>
     )
 }
