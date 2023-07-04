@@ -9,7 +9,7 @@ const AppRouter = () => {
             <Routes>
                 <Route path='/' element={(<LandingPage/>)}/>
                 <Route path='/student-list' element={(<StudentList/>)}/>
-                {/*<Route path={`/single-student/${studentId}`} element={(<SingleStudent studentId={studentId}/>)}/>*/}
+                <Route path={`/single-student/:studentId`} element={(<SingleStudent/>)}/>
                 <Route path='/add-student' element={(<AddStudent/>)}/>
             </Routes>
     )

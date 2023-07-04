@@ -1,6 +1,6 @@
 import {Button, Grid, Typography} from "@mui/material";
 
-const StudentListItem = ( { student, key } ) => {
+const StudentListItem = () => {
     return(
         <Grid item key={key} xs={12} m={1} p={2}
               sx={{
