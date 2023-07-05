@@ -36,9 +36,9 @@ const StudentList = () => {
                 </Typography>
                 <Grid container alignItems='center'>
                     {students && students.map((student, i) => (
-                        <StudentListItem key={i}/>
+                        <StudentListItem itemKey={i} student={student}/>
                     ))}
-                    <Button onClick={() => {navigate(`/single-student/:studentId`)}}>
+                    <Button>
                         ADD STUDENT
                     </Button>
                 </Grid>

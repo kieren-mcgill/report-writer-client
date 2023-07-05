@@ -9,7 +9,7 @@ const SingleStudent = () => {
 
     return(
         <>
-
+<p>{currentStudent.firstName}</p>
         </>
     )
 }
